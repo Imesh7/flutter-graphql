@@ -12,17 +12,13 @@ class HomeView extends StackedView<HomeViewModel> {
       appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            viewModel.busy(viewModel.countries)
-                ? Center(
-                  child: Column(
-                    children: [
-                      CircularProgressIndicator(),
-                    ],
-                  ),
-                )
-                : Expanded(
+        child: viewModel.busy(viewModel.countries)
+            ? const Center(
+                child: CircularProgressIndicator(),
+              )
+            : Column(
+                children: [
+                  Expanded(
                     flex: 1,
                     child: ListView.builder(
                         shrinkWrap: true,
@@ -31,12 +27,12 @@ class HomeView extends StackedView<HomeViewModel> {
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "${index + 1}. ${viewModel.countries!.countries![index]!.name.toString()}",
-                                style: TextStyle(fontSize: 15),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             )),
                   )
-          ],
-        ),
+                ],
+              ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => viewModel.onTapNavigation(),
