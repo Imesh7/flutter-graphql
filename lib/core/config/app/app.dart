@@ -13,5 +13,4 @@ import 'package:stacked/stacked_annotations.dart';
 
 
 class App{
-   //empty class, will be filled after code generation
 }
