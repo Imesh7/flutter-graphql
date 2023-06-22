@@ -1,4 +1,4 @@
-# graphql_test
+# GraphQL Flutter sample app
 
 A new Flutter project.
 
