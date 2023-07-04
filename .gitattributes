@@ -1,2 +1,5 @@
-README.md linguist-generated=true
-*.md linguist-language=Dart
+# Auto detect text files and perform LF normalization
+*        text=auto
+
+# Always perform LF normalization on these files
+*.dart   text
