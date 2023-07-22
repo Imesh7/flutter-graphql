@@ -1,38 +1,39 @@
-# Do not detect
-*.cc -linguist-detectable
-*.cpp -linguist-detectable
+# This file is understood by git 1.7.2+.
 
-# Detect
-#*.dart linguist-detectable
+# Windows specific files should always be crlf on checkout
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
 
-# Auto detect text files and perform LF normalization
-*        text=auto
-# Always perform LF normalization on these files
-*.dart   text
-*.gradle text
-*.html   text
-*.java   text
-*.json   text
-*.md     text
-*.py     text
-*.sh     text
-*.txt    text
-*.xml    text
-*.yaml   text
-# Make sure that these Windows files always have CRLF line endings in checkout
-*.bat             text eol=crlf
-*.ps1             text eol=crlf
-*.rc              text eol=crlf
-*.sln             text eol=crlf
-*.props           text eol=crlf
-*.vcxproj         text eol=crlf
-*.vcxproj.filters text eol=crlf
-# Including templatized versions.
-*.sln.tmpl        text eol=crlf
-*.props.tmpl      text eol=crlf
-*.vcxproj.tmpl    text eol=crlf
-# Never perform LF normalization on these files
-*.ico    binary
-*.jar    binary
-*.png    binary
-*.zip    binary
+# Check out the following as ln always for osx/linux/cygwin
+*.sh text eol=lf
+
+# Opt in the following types to always normalize line endings
+# on checkin and always use native endings on checkout.
+*.config  text
+*.cs      text diff=csharp
+*.csproj  text
+*.md      text
+*.msbuild text
+*.nuspec  text
+*.pp      text
+*.ps1     text
+*.sln     text
+*.tt      text
+*.txt     text
+*.xaml    text
+*.xml     text
+
+# Binary files
+*.bmp     binary
+*.jpeg    binary
+*.jpg     binary
+*.nupkg   binary
+*.png     binary
+*.sdf     binary
+
+*.java linguist-language=Dart
+*.kt linguist-language=Dart
+*.swift linguist-language=Dart
+*.m linguist-language=Dart
+*.h linguist-language=Dart
